@@ -5,7 +5,7 @@ Ottimizzazione convessa di portafoglio secondo la **Modern Portfolio Theory** di
 ## Contenuto — [`frontiera_efficiente.ipynb`](frontiera_efficiente.ipynb)
 
 * Portafoglio a **Minima Varianza Globale (GMV)** con `CVXPY`.
-* **Frontiera efficiente** con vincolo di concentrazione $w_i \le 35\%$ e senza vendite allo scoperto.
+* **Frontiera efficiente** con vincolo di concentrazione $w_i \le 0.35$ e senza vendite allo scoperto.
 * **Portafoglio tangente** (Sharpe Ratio massimo) con la trasformazione di **Charnes-Cooper**, che rende convesso il problema, e **Capital Market Line**.
 
 ## Risultati
