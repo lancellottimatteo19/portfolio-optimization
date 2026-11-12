@@ -1,20 +1,24 @@
-# Ottimizzazione di Portafoglio con CVXPY
+# Portfolio Optimisation with CVXPY
 
-Ottimizzazione convessa di portafoglio secondo la **Modern Portfolio Theory** di Markowitz, con vincoli realistici.
+Convex portfolio optimisation in the Markowitz mean-variance framework, with realistic constraints: no short
+selling and a cap on the weight of each asset.
 
-## Contenuto — [`frontiera_efficiente.ipynb`](frontiera_efficiente.ipynb)
+## Contents — [`efficient_frontier.ipynb`](efficient_frontier.ipynb)
 
-* Portafoglio a **Minima Varianza Globale (GMV)** con `CVXPY`.
-* **Frontiera efficiente** con vincolo di concentrazione $w_i \le 0.35$ e senza vendite allo scoperto.
-* **Portafoglio tangente** (Sharpe Ratio massimo) con la trasformazione di **Charnes-Cooper**, che rende convesso il problema, e **Capital Market Line**.
+* **Global minimum-variance (GMV)** portfolio with `CVXPY`.
+* **Efficient frontier** with a concentration limit $w_i \le 0.35$ and no short selling.
+* **Tangency portfolio** (maximum Sharpe ratio) through the **Charnes-Cooper** transformation, which turns the
+  non-convex Sharpe maximisation into a convex quadratic programme, and the **Capital Market Line**.
 
-## Risultati
+## Results
 
-Con 5 titoli sintetici e tasso privo di rischio del 2%, il portafoglio tangente ha rendimento atteso 10.74%, volatilità 6.42% e Sharpe Ratio 1.360; il valore coincide con quello trovato esplorando 400 punti della frontiera.
+With five synthetic assets and a 2% risk-free rate, the tangency portfolio has an expected return of 10.74%, a
+volatility of 6.42% and a Sharpe ratio of 1.360; the GMV portfolio has an expected return of 9.74% and a volatility
+of 6.10%.
 
-## ▶️ Esecuzione
+## How to run
 
-Serve Python 3.9 o successivo.
+Requires Python 3.9 or later.
 
 ```bash
 git clone https://github.com/lancellottimatteo19/portfolio-optimization-cvxpy.git
@@ -23,4 +27,4 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-I notebook sono salvati con gli output, quindi grafici e risultati si vedono anche direttamente su GitHub.
+The notebook is saved with its outputs, so charts and results are visible directly on GitHub.
